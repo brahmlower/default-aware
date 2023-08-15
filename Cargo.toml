@@ -1,0 +1,20 @@
+[package]
+name = "default_aware"
+version = "0.1.0"
+authors = ["Brahm Lower <contact@brahmlower.io>"]
+edition = "2021"
+description = "A tiny struct for indicating if a value was generated via the Default trait or not."
+readme = "README.md"
+homepage = "https://github.com/brahmlower/default-aware"
+repository = "https://github.com/brahmlower/default-aware"
+license = "MIT"
+
+[features]
+default = ["serde"]
+serde = ["dep:serde"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"], optional = true }
+
+[dev-dependencies]
+serde_json = { version = "1.0" }
