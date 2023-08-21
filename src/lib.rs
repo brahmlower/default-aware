@@ -13,8 +13,7 @@ use serde::{
     de::{Visitor, Error},
 };
 
-
-#[derive(PartialEq, Debug)]
+#[derive(PartialEq, Debug, Clone)]
 pub enum DefaultAware<T: Default> {
     Default(T),
     Declared(T),
