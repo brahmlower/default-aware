@@ -37,10 +37,10 @@ pub struct MyConfig {
 
 fn main() {
 
-    // Our first config will set the port number to the same as the deafult. In this case,
-    // if we weren't using the `DefaultAware` wrapper, the value we would recieve by
-    // deserializing the config would be indistinguishable from the default value, and so
-    // we could not know if the `http_port` was actually set in the document or not.
+    // The first config sets the port number to the same as the default. If we weren't
+    // using the `DefaultAware` wrapper, the value recieved after deserializing would be
+    // indistinguishable from the default value. Therefore we could not know if the
+    // `http_port` field was actually provided in the document or not.
     let config1_json: &str = r#"{ "http_port": 8000 }"#;
 
     // But since we are using the `DefaultAware` wrapper, we can easily tell that the value
